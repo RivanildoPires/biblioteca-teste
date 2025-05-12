@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #F4F4F4;
+}
+
+h1{
+  font-size: 40px;
+}
+
+h2 {
+  font-family: 29px;
+  color: #1C3B79;
+  margin-bottom: 10px;
+}
+h3 {
+  font-family: 22px;
+  color: #1C3B79;
+  margin-bottom: 6px;
+}
+
+p {
+  font-family: 18px;
+  color: #888888;
+  font-weight: bold;
+}
