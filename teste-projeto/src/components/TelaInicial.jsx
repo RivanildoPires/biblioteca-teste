@@ -1,9 +1,14 @@
 import { useState } from "react";
 import "./TelaInicial.css";
 import logo from "../assets/logo.png";
+import livro from "../assets/livro.png"
+import usuario from "../assets/usuario.png"
+import sair from "../assets/sair.png"
 
 const TelaInicial = () => {
   const [name, setName] = useState("Rivanildo");
+  const [busca, setBusca] = useState("");
+  
 
   return (
     <div>
@@ -13,16 +18,18 @@ const TelaInicial = () => {
             <div className="navbar-top">
               <img src={logo} alt="logo-biblioteca" />
 
-              <h1>Bem Vindo {name}</h1>
+              <form className="form">
+                <input type="text" placeholder="Buscar..."/>
+              </form>
               <ul className="list">
                 <li>
-                  <a href="#">Livros Reservado</a>
+                  <img className="livro-img" src={livro} alt="livrinho" /><a href="#">Livros <br />Reservado</a>
                 </li>
                 <li>
-                  <a href="#">Meu Perfil</a>
+                  <img className="usuario-img" src={usuario} alt="usuario"/> <a href="#">Meu <br />Perfil</a>
                 </li>
                 <li>
-                  <a href="#">Sair</a>
+                  <a href="#"><img className="sair-img" src={sair} alt="" /></a>
                 </li>
               </ul>
             </div>
