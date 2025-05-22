@@ -21,10 +21,7 @@
 
 .container-main {
   display: flex;
-  /*width: 1200px;*/
-  width: 100vw;
-  margin: 20px auto;
-  padding: 0 100px;
+  margin: 25px 40px;
 }
 
 .section-livros {
@@ -54,4 +51,67 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 2fr;
+}
+
+@media (max-width: 1400px) {
+  .section-livros {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .container {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .container-main {
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .categories {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .section-livros {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
+    justify-items: center;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .livro {
+    width: 200px;
+    height: 330px;
+  }
+
+  .livro img {
+    height: 225px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-livros {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .livro {
+    width: 180px;
+    height: 310px;
+  }
+
+  .livro img {
+    height: 200px;
+  }
+
+  .livro h5 {
+    font-size: 18px;
+  }
 }
